@@ -10,8 +10,17 @@ method ended up like this:
 Introduction to Internet Software Development (http://www.bcit.ca/study/outlines/20163035498) is a
 course from B.C. Institute of Technology (http://www.bcit.ca/cas/computing/) ✉ (mailto:jim_parry@bcit.ca)
 
-34. Dump new lab8.sql and stored into data folder and delete existed lab5.sql
-33. Updated changed picatures form        
+38.Added function all(), get($key), create(), delete(), exists($key), update($record), add($record) 
+   in Models/Menu.php -- @ck     
+37.Added code to use REST client for models/Menu and added code into constructor -- @ck
+36.Installed package-restful from Jedi Academy and merged to the third-pary folder 
+   and added to  autoload the package in config/autoload -- @ck      
+35.Dropped Menu table regenerating SQL starter -- @ck    
+    
+    -- lab 9 started [For Frontend]
+    
+34. Dump new lab8.sql and stored into data folder and delete existed lab5.sql -- @ck
+33. Updated changed picatures form -- @ck 
 32. Fixed order summary - @ck    
 31. Showed order receipt with total - @ck  
 30. Added a checkout and clear functions to finalize an order or clear it using session data - @ck     
