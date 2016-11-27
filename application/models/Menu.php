@@ -1,10 +1,9 @@
 <?php
-
 /**
  * Modified to use REST client to get port data from our server.
  */
 define('REST_SERVER', 'http://backend.local:4711');  // the REST server host
-define('REST_PORT', $_SERVER['SERVER_PORT']);               // the port you are running the server on
+define('REST_PORT', $_SERVER['SERVER_PORT']);  // the port you are running the server on
 
 class Menu extends MY_Model {
 
@@ -14,7 +13,7 @@ class Menu extends MY_Model {
 		parent::__construct();
                  $this->load->library(['curl', 'format', 'rest']);
                  
-              
+       
 	}
 	public function rules() {
 		$config = [        
@@ -28,19 +27,7 @@ class Menu extends MY_Model {
 			return $config;
 	}
         
-        public function database() {
-            $this->db->where($this->_keyField, $key);
-                  $query = $this->db->get($this->_tableName);
-                  if ($query->num_rows() < 1)
-                        return null;
-                  return $query->row();
-        }
-        public function restcall(){     
-               $this->rest->initialize(array('server' => REST_SERVER . '/maintenance'));
-               $this->rest->option(CURLOPT_PORT, REST_PORT);
-               $result = $this->rest->get('');
-                return $result;
-        }
+
         
         // Return all records as an array of objects
         public function all()
